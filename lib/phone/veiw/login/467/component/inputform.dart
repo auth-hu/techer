@@ -6,6 +6,7 @@ class Inputform extends StatefulWidget {
   final double widthscreen;
   final IconData icon;
   final bool blind;
+  final bool showpass;
   final TextEditingController controller;
   final String text;
   final String? Function(String?)? validator;
@@ -15,8 +16,9 @@ class Inputform extends StatefulWidget {
     required this.widthscreen,
     required this.icon,
     required this.blind,
+    required this.showpass,
     required this.controller,
-    required this.validator
+    required this.validator,
   });
 
   @override
@@ -24,6 +26,7 @@ class Inputform extends StatefulWidget {
 }
 
 class _InputformState extends State<Inputform> {
+  bool showps = true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,12 +49,18 @@ class _InputformState extends State<Inputform> {
 
           TextFormField(
             controller: widget.controller,
-            obscureText: widget.blind,
+            obscureText: widget.blind ? showps : widget.blind,
             cursorColor: darkgreen,
-            autovalidateMode: AutovalidateMode.onUserInteraction,
+            autovalidateMode: AutovalidateMode.onUserInteractionIfError,
             maxLines: 1,
             textAlign: TextAlign.end,
             decoration: InputDecoration(
+              prefixIcon: widget.showpass ? IconButton(onPressed: (){
+                setState(() {
+                 showps = !showps;
+                });
+              }, icon: Icon(showps ? Icons.visibility : Icons.visibility_off, color: gray,)) : null,
+              hoverColor: white,
               suffixIcon: Icon(widget.icon, color: gray),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(6),

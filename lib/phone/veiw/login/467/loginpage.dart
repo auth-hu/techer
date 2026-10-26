@@ -68,6 +68,14 @@ class _Loginpage487State extends State<Loginpage487> {
                       height: 400,
                       margin: EdgeInsets.all(20),
                       decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: gray,
+                            blurRadius: 25,
+                            offset: Offset(10, 15),
+                            spreadRadius: .3
+                          )
+                        ],
                         color: icegreen,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: secgreen, width: 1.2),
@@ -85,6 +93,7 @@ class _Loginpage487State extends State<Loginpage487> {
                             child: Column(
                               children: [
                                 Inputform(
+                                  showpass: false,
                                   text: ":البريد الألكتروني",
                                   widthscreen: widthscreen,
                                   icon: Icons.email_rounded,
@@ -103,6 +112,7 @@ class _Loginpage487State extends State<Loginpage487> {
                                 ),
 
                                 Inputform(
+                                  showpass: true,
                                   text: ":كلمة المرور",
                                   widthscreen: widthscreen,
                                   icon: Icons.wb_cloudy_rounded,
@@ -123,7 +133,11 @@ class _Loginpage487State extends State<Loginpage487> {
                             ),
                           ),
                           SizedBox(height: 32),
-                          Mainbutton(onPressed: () {}),
+                          Mainbutton(onPressed: () {
+                            if(emailController.text == "auth@admin.com" && passwordController.text == "adminadmin"){
+                              emailController.text = "secces";
+                            }
+                          }),
                         ],
                       ),
                     ),

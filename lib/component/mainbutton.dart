@@ -25,7 +25,7 @@ class _MainbuttonState extends State<Mainbutton> {
         enableFeedback: loginactivebtn,
         disabledTextColor: secgreen.withValues(alpha: .2),
         padding: EdgeInsets.all(16),
-        onPressed: widget.onPressed,
+        onPressed: loginactivebtn ? widget.onPressed : (){},
         child: Row(
           children: [
               Expanded(
