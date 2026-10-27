@@ -43,6 +43,7 @@ dependencies:
   connectivity_plus: ^7.3.2
   uuid: ^4.6.0
   google_fonts: ^9.0.0
+  nav_bar: ^0.1.1
 
 dev_dependencies:
   flutter_test:

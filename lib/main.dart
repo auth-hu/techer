@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techer/phone/veiw/home/487/home.dart';
 import 'package:techer/phone/veiw/login/467/loginpage.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class _MyAppState extends State<MyApp> {
         double widthscreen = constraints.minWidth;
         double hightscreen = constraints.minHeight;
         if(widthscreen <= 487){
-          return Loginpage487();
+          return Home();
         }
         return MaterialApp(
           debugShowCheckedModeBanner: false,

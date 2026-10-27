@@ -4,6 +4,7 @@ import 'package:techer/component/mainbutton.dart';
 import 'package:techer/const/bool.dart';
 import 'package:techer/const/color.dart';
 import 'package:techer/const/controllers.dart';
+import 'package:techer/phone/veiw/home/487/home.dart';
 import 'package:techer/phone/veiw/login/467/component/inputform.dart';
 
 class Loginpage487 extends StatefulWidget {
@@ -135,7 +136,7 @@ class _Loginpage487State extends State<Loginpage487> {
                           SizedBox(height: 32),
                           Mainbutton(onPressed: () {
                             if(emailController.text == "auth@admin.com" && passwordController.text == "adminadmin"){
-                              emailController.text = "secces";
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home(),));
                             }
                           }),
                         ],
