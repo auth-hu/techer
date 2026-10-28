@@ -14,7 +14,7 @@ class _BottommuneState extends State<Bottommune> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 75,
+      height: 64,
       margin: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadiusGeometry.circular(100),
