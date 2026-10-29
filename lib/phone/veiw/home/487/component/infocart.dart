@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:techer/component/maintitle.dart';
 import 'package:techer/const/color.dart';
 import 'package:techer/phone/veiw/home/487/component/cardhome.dart';
 import 'package:techer/phone/veiw/home/487/component/cardhomesec.dart';
@@ -19,19 +19,7 @@ class _InfocartState extends State<Infocart> {
       margin: EdgeInsets.symmetric(vertical: 16),
       child: Column(
         children: [
-          Container(
-            width: double.infinity,
-            alignment: Alignment.centerRight,
-            margin: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-            child: Text(
-              ":قسم الطلاب",
-              style: GoogleFonts.rubik(
-                fontSize: widget.widthscreen * .03,
-                fontWeight: FontWeight.bold,
-                color: gray.withValues(alpha: .7)
-                ),
-            ),
-          ),
+          Maintitle(title: ":قسم الطلاب", widthscreen: widget.widthscreen),
           Row(
             children: [
               Expanded(

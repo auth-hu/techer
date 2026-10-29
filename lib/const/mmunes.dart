@@ -11,3 +11,5 @@ final List<Widget> homePages = [
   Center(child: Text("الطلاب"),),
   Center(child: Text("الاعدادات"),),
 ];
+
+List<Map<String, dynamic>> mainShortCutList = [];

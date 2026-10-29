@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:techer/const/color.dart';
 import 'package:techer/phone/veiw/home/487/component/header.dart';
 import 'package:techer/phone/veiw/home/487/component/infocart.dart';
+import 'package:techer/phone/veiw/home/487/component/shortadd.dart';
 
 class Shorcat extends StatefulWidget {
   const Shorcat({super.key});
@@ -25,6 +26,8 @@ class _ShorcatState extends State<Shorcat> {
                 children: [
                   Header(widthscreen: widthscreen),
                   Infocart(widthscreen: widthscreen,),
+                  Shortadd(widthscreen: widthscreen),
+                  SizedBox(height: 75,)
                   ]
                   ),
             ),
